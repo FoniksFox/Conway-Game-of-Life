@@ -185,12 +185,12 @@ gl_FragColor.g = (newAge * 16.0 + newEnergy) / 255.0;
 ### Conway's Game of Life Preservation
 
 
-| Original Conway's Rule      | Genetic Equivalent                            |
-| ----------------------------- | ----------------------------------------------- |
-| 3 neighbors → birth        | Sufficient emission threshold → reproduction |
-| <2 or >3 neighbors → death | Energy below/above viable range → death      |
-| Static structures           | Self-stabilizing genetic configurations       |
-| Gliders & oscillators       | Asymmetric emission patterns → movement      |
+| Original Conway's Rule        | Genetic Equivalent                                |
+| ----------------------------- | -----------------------------------------------   |
+| 3 neighbors → birth           | Sufficient emission threshold → reproduction      |
+| <2 or >3 neighbors → death    | Energy below/above viable range → death           |
+| Static structures             | Self-stabilizing genetic configurations           |
+| Gliders & oscillators         | Asymmetric emission patterns → movement           |
 
 ## Development Roadmap
 
