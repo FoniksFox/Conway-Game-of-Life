@@ -432,12 +432,12 @@ def random_scenario(
     out = {
         "grid_size": grid_size,
         "initial_energy": energy_config["initial_energy"],
-        "wrap_edges": random.choice([True, False]),  # Randomize edge wrapping
+        "wrap_edges": True,
         "initial_cells": [],
         "emission_decay": energy_config["emission_decay"],
         "emission_cost": energy_config["emission_cost"],
         "net_energy_input": energy_config["net_energy_input"],
-        "cell_size": min(15, max(2, min(1800 // grid_size[0], 1000 // grid_size[1]))),  # Auto-size for 1080p screen
+        "cell_size": min(15, max(2, min(700 // grid_size[0], 1000 // grid_size[1]))),  # Auto-size
         "mutation_strength": random.uniform(0.001, 0.05)  # Random mutation strength
     }
     
@@ -657,7 +657,7 @@ def random_battle_scenario() -> Dict[str, Any]:
     return random_scenario(
         grid_size=(80, 80),
         num_species=4,
-        cluster_size=3,
+        cluster_size=15,
         mutation_variance=1.5,
         energy_level="medium"
     )
@@ -667,7 +667,7 @@ def random_survival_scenario() -> Dict[str, Any]:
     return random_scenario(
         grid_size=(100, 100),
         num_species=6,
-        cluster_size=2,
+        cluster_size=15,
         mutation_variance=2.0,
         energy_level="low"
     )
@@ -677,7 +677,7 @@ def random_abundance_scenario() -> Dict[str, Any]:
     return random_scenario(
         grid_size=(120, 120),
         num_species=7,
-        cluster_size=5,
+        cluster_size=15,
         mutation_variance=3.0,
         energy_level="high"
     )
